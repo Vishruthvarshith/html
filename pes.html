@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> login page</title>
+    <style>
+        .body_deco{
+            border:2px;
+            margin: 2px;
+            padding: 2px;
+
+        }
+        .form_decoration{
+            background-color: cadetblue;
+            opacity: 0.8;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .body_deco1{
+            background-color:rgb(215, 72, 72);
+            opacity: 0.9;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .decoration{
+            background-image: url(login_bg_acdemy.jpg);
+        }
+    </style>
+    <script>
+        function login_form()
+        {
+            var mail = document.getElementById("email_id").value;
+            var password = document.getElementById("password_id").value;
+
+            console.log("Mail: " + mail);
+            console.log("Password: " + password);
+
+            if (mail && password) {
+                alert("Login successful");
+                window.open("revaluation.html", "_self");
+            } else {
+                alert("Enter valid details");
+            }
+
+        }
+        function redirect_click()
+        {
+            window.open("https://www.youtube.com","_self");
+        }
+    </script>
+    </head>
+    <body class="decoration" style="background-color: bisque;">
+    <div >
+        
+        <div>
+            <img src="PESLogo.jpg" width="100"></img>
+        </div>
+        <br>
+        <br>
+        <fieldset class="body_deco1">
+        <div>
+            <center><img src="pesu-logo-seo.jpg" width="100" height="100"></img></center>
+        </div>
+        <br>
+        <br>
+        <div class="body_deco">
+            <fieldset class="form_decoration">
+            <div >
+                <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,monospace;text-align:start;">sign in </h1>
+            </div>
+            <br>
+            <br>
+            <div>
+            <form method="post" action="second.php">
+                
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" id="email_id" placeholder="email" style="block-size:30px;" size="80" > </input>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="password">password</label>
+                    <input type="password" placeholder="password" id="password_id" style="block-size: 30px;" size="78">
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="login"></label>
+                    <input type="button" value="login" id="login_id" style="block-size: 40px;width: fit-content;border-radius: 10px;" onclick="login_form()" >
+                </div>
+                <br>
+                <br>
+                <h2><b>or</b></h2>
+                <br>
+                <div>
+                    <label for="sign in with goggle"></label>
+                    <button type="button" id="button_id" style="block-size: 40px;width: fit-content;border-radius: 10px;" onclick="redirect_click()">sign in with goggle</button>
+                </div>
+                <br>
+                <div>
+                    <label for="forgot_password"></label>
+                    <a href="/Users/vishruth/Desktop/comp_sc/web tech/forgot_password.html" style="color:black">forgot your password</a> 
+                </div>
+
+                
+            </form>
+            </feildset>
+            </div>
+        </fieldset >
+        </div>    
+</body>
+</html>

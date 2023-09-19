@@ -1,0 +1,206 @@
+
+<html>
+<head>
+    <title>revaluation form</title>
+    <style>
+        fieldset{
+            background-color: rgb(243, 245, 243);opacity: 0.8;;
+        }
+        table{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-color: bisque;
+            border:2px;
+            margin:2px;
+        }
+        fieldset{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        h2{
+            color:rgb(243, 245, 243);
+            opacity:0.7;
+        }
+        .background{
+            background-color:rgb(175, 177, 175);
+            opacity:0.9;
+
+        }
+        th,td{
+            padding-top: 15px;
+            padding-bottom: 25px;
+            padding-left: 30px;
+            padding-right: 50px;
+        }
+        .div5{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+            function submitform(){
+            var name = document.getElementById("name_id").value;
+            var srn = document.getElementById("SRN_id").value;
+            var subject = document.getElementById("subject_id").value;
+            var phone = document.getElementById("phone").value;
+            var branch = document.querySelector('select[name="branch"]').value;
+            var email = document.getElementById("email_id").value;
+            var reval_date = document.getElementById("reval_id").value;
+            var details = document.getElementById("details").value;
+            var confirmation = document.getElementById("confirmation").checked;
+            //var gender=document.getelementbyid("gender_id").value;
+
+            if (name && srn && subject && phone && branch && email && reval_date && details && confirmation) {
+                alert("Submitted successfully!");
+                alert("will be taken care of ");
+            } else{
+                alert("Please fill in all the fields and confirm before submitting.");
+            }
+        }
+
+        function resetfunc() {
+            document.getElementById("revaluationForm").reset();
+        }
+    </script>
+
+</head>
+<body background="login_bg_acdemy.jpg">
+    <img src="PESLogo.jpg" width="100">
+    <div class="background">
+    <br>
+    
+    <br>
+    <div class="div5">
+        <form id="revaluationForm">
+            <fieldset style="background-color: beige;">
+        <center><div>
+        <table border="5" style="border-color: azure;" bgcolor="cadetblue" class="table1">
+            <caption style="color:black;"><big>Revaluation form</big></caption>
+            <form>
+            <tr>
+            <td><label for="name">Name: </label></td>
+            <td><input type="text" value="" id="name_id" placeholder="name"></td>
+            </tr>
+            <tr>
+                <td><label for="gender" id="gender_id">Gender</label></td>
+                <td><input type="radio" name="gender">Male
+                    <input type="radio" name="gender">Female
+                    <input type="radio" name="gender">trans
+            </tr>
+            
+
+            <tr>
+                <td><label for="SRN">SRN: </label></td>
+                <td><input type="text" id="SRN_id" placeholder="SRN" maxlength="13"></td>
+            </tr>
+            <tr>
+
+            <tr>
+                <td><label for="subject">Subject</label></td>
+                <td><input type="text" id="subject_id" placeholder="Subject"></td>
+            </tr>
+            <tr>
+                <td><label for="Phone No">Phone No: </label></td>
+                <td><input type="tel" id="phone" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td><label for="Branch">Branch </label></td>
+                <td><select name="branch">
+                    <div>
+                    <option>AIML</option>
+                    <option>CSE</option>
+                    <option>EEE</option>
+                    <option>ECE</option>
+                    <option>BIO TETCH</option>
+                    </div>
+                </select></input></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email ID:</label></td>
+                <td><input type="email" placeholder="example@gmail.com" id="email_id"></td>
+            </tr>
+            <tr>
+                <td><label for="reval_date">date of revaluation</label></td>
+                <td><input type="date" id="reval_id" name="date"></td>
+            </tr>
+        </table>
+        </div>
+        </center>
+        </fieldset>
+        </form>
+        </div>
+        <br>
+        <br>
+         <div>
+            <h2>Confirmation Form</h2>
+            <form action="submit_action.php" method="post">
+                <label for="details">Details:</label>
+                <textarea id="details" name="details" rows="4" cols="50" id="decription"></textarea>
+                <br><br>
+        
+                <label for="confirmation" style="color:black;">Confirm that all details are appropriate:</label>
+                <input type="checkbox" id="confirmation" name="confirmation">
+                <br><br>
+                <input type="reset" id="resetbtn" value="reset" onclick="resetfunc()">
+                <input type="submit" id="submitbtn" value="Submit" onclick="submitform()">
+            </form>
+        </div>
+        </div>
+        <br>
+        <br>
+        <div>
+        <center>
+            <table  border="1" color="black" style="background-color:cadetblue;opacity:0.9;">
+                <caption><b>Re-evaluation Details</b></caption>
+                <tr>
+                    <th columnspan=4>Subject</th>
+                    <th columnspan=4>Subject Code</th>
+                    <th columnspan=4>Date of exam</th>
+                    <th columnspan=4>Marks obtained</th>
+                    <th columnspan=4>Grade obtained</th>
+                    <th columnspan=4>Amount paid</th>
+                </tr>
+                <tr>
+                    <td >Web-Tech</td>
+                    <td>PES151</td>
+                    <td>12-02-2023</td>
+                    <td>80</td>
+                    <th>A</th>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Data-structures</td>
+                    <td>PES141</td>
+                    <td>14-02-2023</td>
+                    <td>75</td>
+                    <th>B</th>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Statistics</td>
+                    <td>PES161</td>
+                    <td>16-02-2023</td>
+                    <td>62</td>
+                    <th>C</th>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>PES181</td>
+                    <td>18-02-2023</td>
+                    <td>89</td>
+                    <th>A</th>
+                    <td>200</td>
+                </tr>
+            </table>
+            </center>
+    </div>
+</body>
+</html>
